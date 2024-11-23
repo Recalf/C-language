@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    char s[101]; // or = malloc(102 * sizeof(s))
+    char s[101]; // or = malloc(102 * sizeof(char))
     char t[101];
 
     printf("Write your first word ");
