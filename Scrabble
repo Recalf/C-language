@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+// assigne the words with points using arrays
+const int pts[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+
+int points(const char* p);
+// take input
+int main (void)
+{
+    char p1[30];
+    char p2[30];
+    printf("Player 1: ");
+    scanf("&29s", p1)
+    printf("Player 2: ");
+    scanf("&29s", p2)
+
+// make comparison between p1 and p2 points and print the winner
+    if (points(p1) > points(p2))
+    {
+        printf("Player 1 Wins!\n");
+    }
+    else if (points(p1) < points(p2))
+    {
+        printf("Player 2 Wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
+    }
+}
+// turn the input into points
+int points(const string p)
+{
+    int score = 0;
+    for(int i = 0, n = strlen(p); i < n; i++)
+    {
+        if (isalpha(p[i]))
+        {
+            score += pts[tolower(p[i]) - 'a'];
+        }
+    }
+    return score;
+}
