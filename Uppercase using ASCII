@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main (void)
+{
+    char text[30];
+    printf("plaintext (30 caracters):  ");
+    scanf("%29s", text);
+    
+    printf("After: ");
+
+    for (int i=0; i < strlen(old); i++)
+    {
+        if (old[i] >= 97 && old[i] <= 122)
+        {
+            old[i] -= 32;
+            printf("%c", old[i]);
+        }
+        else
+        {
+            printf("%c", old[i]);
+        }
+    }
+    printf("\n");
+}
