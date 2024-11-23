@@ -10,7 +10,7 @@ int Sntc(const char* txt);
 int main(void)
 {
     // take input
-    text = [2000];
+    char text[2000];
     printf("text (2000 caracters):  ");
     scanf("&2000s", text);
 
