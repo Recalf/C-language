@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    char s[101]; // or = malloc(102 * sizeof(s))
+    char t[101];
+
+    printf("Write your first word ");
+    scanf("%100s", s);
+    printf("Write your second word ");
+    scanf("%100s", t);
+
+
+    int z = 0;
+    int a = strlen(s);
+    int b = strlen(t);
+
+    if (a != b)
+    {
+        printf("Not equal\n");
+        return 0;
+    }
+
+    for (int i = 0 ; i < a ; i++)
+    {
+        // if you (the coder) another time wants it to be case insensitive you should add to this line if s[i] is between the uppercase ascii lower case it, the same as t[i]. or just use tolower function.
+        if (s[i] - t[i] != 0)
+        {
+            printf("Not equal\n");
+            return 0;
+        }
+    }
+    printf("Equal\n");
+
+}
