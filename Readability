@@ -10,9 +10,9 @@ int Sntc(const char* txt);
 int main(void)
 {
     // take input
-    text = [2000]
+    text = [2000];
     printf("text (2000 caracters):  ");
-    scanf("&2000s", text)
+    scanf("&2000s", text);
 
 
     // calculate the readability with that algorithm
