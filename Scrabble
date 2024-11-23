@@ -30,7 +30,7 @@ int main (void)
         printf("Tie!\n");
     }
 }
-// turn the input into points
+// turn the input into points by ASCII
 int points(const string p)
 {
     int score = 0;
