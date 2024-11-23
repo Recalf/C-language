@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <ctype.h>
+
+int lett(const char* txt);
+float Wrd(const char* txt);
+int Sntc(const char* txt);
+
+int main(void)
+{
+    // take input
+    text = [2000]
+    printf("text (2000 caracters):  ");
+    scanf("&2000s", text)
+
+
+    // calculate the readability with that algorithm
+    double S = (Sntc(text) / Wrd(text)) * 100;
+    double L = (lett(text) / Wrd(text)) * 100;
+
+    int readability = round (0.0588 * L - 0.296 * S - 15.8);
+
+    // print the readability
+    if (readability >= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else if (readability < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else
+    {
+        printf("Grade %i\n", readability);
+    }
+}
+
+float Wrd(const string txt)
+{
+ // L = average number of letters per 100 words
+        // calculate letters
+
+        // calculate words
+        // words always have space between them
+        int words = 1; // because of the last word does'nt have a blank space after it, so i've added +1 word
+        for (int i = 0, n = strlen(txt); i < n ; i++)
+        {
+            if (isspace(txt[i]))
+            {
+                words ++;
+            }
+        }
+
+    return words;
+}
+
+int Sntc(const char* txt)
+{
+    // S = average number of sentences per 100 words
+
+    // sentence always finish with . or ! or ? with space after them because of abrv like U.S.A
+    // and that leads to initialization sentences = 1because the last word doesnt have space after it
+    int sentences = 1;
+    for (int i = 0, n = strlen(txt) ; i < n ; i++)
+    {
+   // IMPROVEMENT : DETECT IF THESE PUNCTUATIONS ARE INSIDE A DIALOGUE (" ") OR NOT, BECAUSE THERE COULD BE "OH WOW! THATS AMAZING! RIGHT?" AND THE PROGRAM WILL COUNT THIS AS +2 SENTENCES (punct + space).
+        if (((txt[i] == '!') || (txt[i] == '.') || (txt[i] == '?')) && (isspace (txt[i+1])))
+        {
+            sentences ++;
+        }
+    }
+    return sentences;
+}
+
+int lett(const char* txt)
+{
+    int letters = 0;
+    for (int i = 0, n = strlen(txt); i < n; i++)
+        {
+            if isalpha(txt[i])
+            {
+                letters++;
+            }
+        }
+    return letters;
+}
