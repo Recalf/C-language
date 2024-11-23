@@ -17,10 +17,10 @@ int main (int argc, char* argv[])
         {
             const long key = atol(argv[1]);
 
-             // take text then for the char of text[i] add the key
+            // take text then for the char of text[i] add the key
             char text[400];
             printf("plaintext (400 caracters):  ");
-            scanf("&399s", text);
+            scanf("%399s", text);
 
 
             rotate(text, key);
