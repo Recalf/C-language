@@ -11,7 +11,7 @@ int main (void)
     {
         int tall;
         printf("this will create a pyramid split in the middle, how tall do you want the it to be ?   "));
-        scanf("%i", tall)
+        scanf("%i", tall);
 
         draw(tall, tall);
     } while (tall <= 0);
