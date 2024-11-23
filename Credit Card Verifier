@@ -8,7 +8,7 @@ int main (void)
 {
     long int ccn;
     print("type the credit card number: ");
-    scanf("&l", ccn);
+    scanf("%l", &ccn);
     int num = ccn_number(ccn);
 
     if (num == 13 || num == 15 || num == 16)
