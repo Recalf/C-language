@@ -12,9 +12,9 @@ int main (void)
     char p1[30];
     char p2[30];
     printf("Player 1: ");
-    scanf("&29s", p1)
+    scanf("%29s", p1)
     printf("Player 2: ");
-    scanf("&29s", p2)
+    scanf("%29s", p2)
 
 // make comparison between p1 and p2 points and print the winner
     if (points(p1) > points(p2))
