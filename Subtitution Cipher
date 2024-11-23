@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdlib.h>
+
+// 'a' for "text", 'b' for "key", 'c' for strlen of the "key"
+
+bool only_26_chars(char* b, int c);
+bool unique(char* b, int c);
+char* subs(char* a, char* b);
+
+int main (int argc, char* argv[])
+{
+    //the key
+    if (argc == 2)
+    {
+        char* key = argv[1];
+        int n = strlen(key);
+
+        if ((only_26_chars(key, n) && unique(key, n)) == true)
+        {
+
+            // take text then for the char of text[i] add the key
+            text = [400]
+            printf("plaintext (400 caracters):  ");
+            scanf("&399s", text)
+            subs(text, key);
+
+            printf("ciphertext: %s\n", text);
+
+            return 0;
+        }
+        else
+        {
+            printf("ERROR\n");
+            return 1;
+        }
+
+    }
+    printf("Error\n");
+    return 1;
+}
+
+bool only_26_chars(char* b, int c)
+{
+    if (c == 26)
+    {
+        for (int i = 0; i < c; i++)
+        {
+            if (!isalpha(b[i]))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    return false;
+}
+
+char* subs(char* a, char* b)
+{
+    int pos;
+    for (int i = 0, d = strlen(a); i < d; i++)
+    {
+        // position of text == ascii
+        if isupper(a[i])
+        {
+            pos = a[i] - 'A';
+            a[i] = toupper(b[pos]);
+        }
+        else if islower(a[i])
+        {
+            pos = a[i] - 'a';
+            a[i] = tolower(b[pos]);
+        }
+    }
+
+    return a;
+}
+
+bool unique(char* b, int c)
+{
+    for(int i = 0; i < c; i++)
+    {
+        //check whats before i times
+        for (int d = 0; d < i; d++)
+        {
+            //check whats before i times for the position i
+            if (b[i] == b[d])
+            {
+                return 0; // return 0 is the same as return false
+            }
+        }
+    }
+    return 1;
+}
