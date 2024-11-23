@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+
+int main (void)
+{
+
+    int tall;
+    do
+    {
+        int tall;
+        printf("this will create a pyramid split in the middle, how tall do you want the it to be ?   "));
+        scanf("%i", tall);
+
+        for (int i = 0; i < tall; i++)
+        {
+            for(int space = tall - 1; space > i; space--)
+            {
+                printf(" ");
+            }
+
+            int blocks;
+            for(blocks = 0; blocks <= i; blocks++)
+            {
+                printf("#");
+            }
+
+            printf("  ");
+
+            for(blocks = 0; blocks <= i; blocks++)
+            {
+                printf("#");
+            }
+            printf("\n");
+        }
+    } while (tall <= 0);
+}
