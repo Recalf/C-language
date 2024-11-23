@@ -1,0 +1,60 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void draw (int a);
+int main (void)
+{
+    int height;
+    printf("Height : ");
+    scanf("%i", height);
+    draw(height);
+}
+
+void draw (int a)
+{
+
+    if (a <= 0)
+    {
+        return;
+    }
+
+    draw(a-1); /* functions gets called function by function like :
+
+    draw(5)
+        draw (4)
+            draw(3)
+                draw(2)
+                    draw(1)
+                        draw(0)
+                            and we have the if a <= 0 then return
+                            then the draw 0 would return to draw (1)
+                            (it wont execute the for loop and reutne automatically becuase we manually returned it if its 0)
+                    and it would do the for loop of draw (1)
+                    ///becuase it continues the rest of the code of draw(1) after draw 0 (a-1) finishes///
+                    and it automatically return because the function finishes
+                then it would continue the rest of the code of draw (2) (the foor loop of draw(2))
+                finish (== return)
+            for loop of draw (3)
+            return
+        for loop of the draw (4)
+        return
+    for loop (of the draw (5))
+    return
+then there is no function to return to so the function ends
+
+SO RECURRSION BASICALLY IS NESTING FUNCTIONS
+
+    */
+
+    for (int i = 0; i < a; i++)
+    {
+        printf("#");
+    }
+
+    printf("\n");
+
+// PS this is the rest of the code of draw(5)
+
+}
