@@ -12,7 +12,7 @@ int main(void)
     // take input
     char text[2000];
     printf("text (2000 caracters):  ");
-    scanf("&2000s", text);
+    scanf("%2000s", text);
 
 
     // calculate the readability with that algorithm
