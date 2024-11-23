@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
     if (input == NULL)
     {
-        printf("Could not open file.\n");
+        printf("Could not open file\n");
         fclose(input);
         return 1;
     }
