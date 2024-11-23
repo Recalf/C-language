@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+
+
+void draw (int a, int b);
+int main (void)
+{
+
+    int tall;
+    do
+    {
+        int tall;
+        printf("this will create a pyramid split in the middle, how tall do you want the it to be ?   "));
+        scanf("%i", tall)
+
+        draw(tall, tall);
+    } while (tall <= 0);
+}
+
+void draw (int a, int b)
+{
+    if (a <= 0)
+    {
+        return;
+    }
+
+    draw (a - 1, b);
+
+    int c = b - a;
+
+    while (c > 0)
+    {
+        printf(" ");
+        c--;
+    }
+
+    int blocks;
+
+    for(blocks = 0; blocks < a; blocks++)
+    {
+        printf("#");
+    }
+
+    printf("  ");
+
+    for(blocks = 0; blocks < a; blocks++)
+    {
+        printf("#");
+    }
+    printf("\n");
+
+}
