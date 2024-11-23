@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdlib.h>
+
+bool only_digits (const char* a);
+
+
+char* rotate (const char* a, const long b);
+
+int main (int argc, char* argv[])
+{
+    //the key
+    if (argc == 2)
+    {
+        if (only_digits(argv[1]) == true)
+        {
+            const long key = atol(argv[1]);
+
+             // take text then for the char of text[i] add the key
+            text = [400]
+            printf("plaintext:  ");
+            scanf("&399s", text)
+
+
+            rotate(text, key);
+
+            printf("ciphertext: %s\n", text);
+
+            return 0;
+        }
+        else
+        {
+            printf("Usage: ./caesar key\n");
+
+            return 1;
+        }
+    }
+    else
+    {
+        printf("Error\n");
+        return 1;
+    }
+}
+
+bool only_digits (const char* a)
+{
+    bool tr;
+    int n = strlen(a);
+    for (int i = 0; i < n; i++)
+    {
+        if (isdigit(a[i]))
+        {
+            tr = true;
+        }
+        else
+        {
+            tr = false;
+            break;
+        }
+    }
+    return tr;
+}
+
+char* rotate (const char* a, const long b)
+{
+        for (int i = 0, n = strlen(a); i < n; i++)
+        {
+            if isupper(a[i])
+            {
+                a[i] = (((a[i] - 'A') + b) % 26) + 'A';
+            }
+            else if islower(a[i])
+            {
+                a[i] = (((a[i] - 'a') + b) % 26) + 'a';
+            }
+        }
+    return a;
+}
